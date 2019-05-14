@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">InstagramClone</string>
+    <string name="mitch">Kubra</string>
+    <string name="iliveineskisehirtr">I live in Eskisehir, TR</string>
+    <string name="httpskubraozturkcom" translatable="false">https://kubraozturk.com</string>
+    <string name="posts">Posts</string>
+    <string name="edit_profile_fragment">Edit Profile</string>
+    <string name="sign_out_fragment">Sign Out</string>
+    <string name="auth_failed">Authentication failed</string>
+    <string name="auth_success">Authentication successed</string>
+    <string name="dbname_users"> users</string>
+    <string name="dbname_user_account_settings"> user_account_settings</string>
+    <string name="emailpassword_status_fmt">Email User: %1$s (verified: %2$b)</string>
+    <string name="firebase_status_fmt">Firebase User: %s</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="profile_fragment">Profile</string>
+    <string name="profile_activity">profile_activity</string>
+    <string name="calling_activity">calling_activity</string>
+    <string name="confirm_password_dialog">ConfirmPasswordDialog</string>
+    <string name="field_username">username</string>
+    <string name="field_email">email</string>
+    <string name="field_display_name">display_name</string>
+    <string name="field_website">website</string>
+    <string name="field_description">description</string>
+    <string name="field_phone_number">phone_number</string>
+    <string name="dbname_photos">photos</string>
+    <string name="dbname_user_photos">user_photos</string>
+    <string name="selected_bitmap">selected_bitmap</string>
+    <!-- strings -->
+    <string name="gallery">GALLERY</string>
+    <string name="photo">PHOTO</string>
+    <string name="string_open_camera">OPEN CAMERA</string>
+    <string name="string_next">Next</string>
+    <string name="new_photo">new_photo</string>
+    <string name="profile_photo">profile_photo</string>
+
+    <!-- Intent Extras -->
+    <string name="selected_image">selected_image</string>
+    <string name="string_share">Share</string>
+    <string name="return_to_fragment">return_to_fragment</string>
+    <!-- Bundle arg names -->
+    <string name="activity_number">activity_number</string>
+    <string name="view_post_fragment">View Post</string>
+
+
+</resources>
