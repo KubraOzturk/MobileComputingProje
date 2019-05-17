@@ -19,9 +19,7 @@ import com.kubra.instagramclone.R;
 import com.kubra.instagramclone.Utils.Login.LoginActivity;
 
 
-/**
- * Created by User on 6/4/2017.
- */
+
 
 public class SignOutFragment extends Fragment {
 

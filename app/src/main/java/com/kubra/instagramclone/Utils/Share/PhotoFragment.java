@@ -1,7 +1,11 @@
 package com.kubra.instagramclone.Utils.Share;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.graphics.Bitmap;
+import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.Nullable;
@@ -11,19 +15,24 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.Switch;
 
 import com.kubra.instagramclone.R;
 import com.kubra.instagramclone.Utils.Profile.AccountSettingsActivity;
 import com.kubra.instagramclone.Utils.Utils.Permissions;
 
+import static com.firebase.ui.auth.AuthUI.getApplicationContext;
+
 public class PhotoFragment extends Fragment {
     private static final String TAG = "PhotoFragment";
+//    private Switch wifiSwitch;
+//    private WifiManager wifiManager;
 
     //constant
     private static final int PHOTO_FRAGMENT_NUM = 1;
     private static final int GALLERY_FRAGMENT_NUM = 2;
     private static final int  CAMERA_REQUEST_CODE = 5;
-
 
     @Nullable
     @Override
@@ -32,6 +41,22 @@ public class PhotoFragment extends Fragment {
         Log.d(TAG, "onCreateView: started.");
 
         Button btnLaunchCamera = (Button) view.findViewById(R.id.btnLaunchCamera);
+//        wifiSwitch =(Switch) view.findViewById(R.id.wifi_switch);
+//        wifiManager = (WifiManager) getContext().getSystemService(Context.WIFI_SERVICE);
+//        wifiSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+//                if (isChecked) {
+//                    wifiManager.setWifiEnabled(true);
+//                    wifiSwitch.setText("WiFi is ON");
+//                } else {
+//                    wifiManager.setWifiEnabled(false);
+//                    wifiSwitch.setText("WiFi is OFF");
+//                }
+//            }
+//        });
+
+
         btnLaunchCamera.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -98,5 +123,38 @@ public class PhotoFragment extends Fragment {
 
         }
     }
+    @Override
+    public void onStart() {
+        super.onStart();
+        IntentFilter intentFilter = new IntentFilter(WifiManager.WIFI_STATE_CHANGED_ACTION);
+       // registerReceiver(wifiStateReceiver, intentFilter);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        //unregisterReceiver(wifiStateReceiver);
+    }
+
+//    private BroadcastReceiver wifiStateReceiver = new BroadcastReceiver() {
+//        @Override
+//        public void onReceive(Context context, Intent intent) {
+//            int wifiStateExtra = intent.getIntExtra(WifiManager.EXTRA_WIFI_STATE,
+//                    WifiManager.WIFI_STATE_UNKNOWN);
+//
+//            switch (wifiStateExtra) {
+//                case WifiManager.WIFI_STATE_ENABLED:
+//                    wifiSwitch.setChecked(true);
+//                    wifiSwitch.setText("WiFi is ON");
+//                    break;
+//                case WifiManager.WIFI_STATE_DISABLED:
+//                    wifiSwitch.setChecked(false);
+//                    wifiSwitch.setText("WiFi is OFF");
+//                    break;
+//            }
+//        }
+//    };
+
+
 }
 

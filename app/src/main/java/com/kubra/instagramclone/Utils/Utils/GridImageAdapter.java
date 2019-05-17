@@ -19,10 +19,6 @@ import java.util.ArrayList;
 
 
 
-/**
- * Created by User on 6/4/2017.
- */
-
 public class GridImageAdapter extends ArrayAdapter<String>{
 
     private Context mContext;

@@ -15,4 +15,33 @@
         android:background="@drawable/white_rounded_button"
         android:id="@+id/btnLaunchCamera"/>
 
+    <!--<Switch-->
+        <!--android:id="@+id/wifi_switch"-->
+        <!--android:layout_width="146dp"-->
+        <!--android:layout_height="72dp"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_marginStart="108dp"-->
+        <!--android:layout_marginTop="230dp"-->
+        <!--android:layout_marginEnd="157dp"-->
+        <!--android:layout_marginBottom="429dp"-->
+        <!--android:text="WiFi is OFF " />-->
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="352dp"
+        android:layout_marginEnd="177dp"
+        android:layout_marginBottom="352dp"
+        android:text="WiFi is OFF"
+        android:id="@+id/wifi_switch"/>
+
+
 </RelativeLayout>
